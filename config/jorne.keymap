@@ -76,7 +76,7 @@
             bindings = <
 &kp PIPE  &kp F12           &kp UNDERSCORE  &kp HOME        &kp UP_ARROW    &kp END          &kp MINUS  &kp C_VOL_UP       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp C_PAUSE  &kp CAPS  &trans
           &kp LEFT_CONTROL  &kp PLUS        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL  &kp C_VOLUME_DOWN  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none        &none
-          &kp LC(NUHS)      &kp NUHS        &kp PAGE_UP     &kp UNDERSCORE  &kp PAGE_DOWN    &kp PIPE   &kp C_MUTE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT      &trans
+          &kp LC(NUBS)      &kp NUBS        &kp PAGE_UP     &kp UNDERSCORE  &kp PAGE_DOWN    &kp PIPE   &kp C_MUTE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT      &trans
                                                             &trans          &trans           &lt 3 RET  &lt 3 ESC          &kp KP_NUMBER_0  &kp COMMA
             >;
         };
