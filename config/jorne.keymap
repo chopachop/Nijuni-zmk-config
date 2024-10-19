@@ -40,6 +40,27 @@
             bindings = <&kp LG(TAB)>;
             label = "ALTTAB";
         };
+
+        Wrap_console_log: Wrap_console_log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp W>;
+            label = "WRAP_CONSOLE_LOG";
+        };
+
+        Wrap_console_down: Wrap_console_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp DOWN>;
+            label = "WRAP_CONSOLE_DOWN";
+        };
+
+        Wrap_console_up: Wrap_console_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp UP>;
+            label = "WRAP_CONSOLE_UP";
+        };
     };
 
     combos {
@@ -74,19 +95,19 @@
 
         layer_raise {
             bindings = <
-&kp PIPE  &kp F12           &kp UNDERSCORE  &kp HOME        &kp UP_ARROW    &kp END          &kp MINUS  &kp C_VOL_UP       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp C_PAUSE  &kp CAPS  &trans
-          &kp LEFT_CONTROL  &kp PLUS        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL  &kp C_VOLUME_DOWN  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none        &none
-          &kp LC(NUBS)      &kp NUBS        &kp PAGE_UP     &kp UNDERSCORE  &kp PAGE_DOWN    &kp PIPE   &kp C_MUTE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT      &trans
-                                                            &trans          &trans           &lt 3 RET  &lt 3 ESC          &kp KP_NUMBER_0  &kp COMMA
+&kp PIPE  &kp F12           &kp UNDERSCORE    &kp HOME        &kp UP_ARROW    &kp END          &kp MINUS  &kp C_VOL_UP       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp C_PAUSE  &kp CAPS  &trans
+          &kp LEFT_CONTROL  &kp PLUS          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL  &kp C_VOLUME_DOWN  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none        &none
+          &kp LC(NUBS)      &Wrap_console_up  &kp PAGE_UP     &kp UNDERSCORE  &kp PAGE_DOWN    &kp PIPE   &kp C_MUTE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT      &trans
+                                                              &trans          &trans           &lt 3 RET  &lt 3 ESC          &kp KP_NUMBER_0  &kp COMMA
             >;
         };
 
         layer_adjust {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &none  &none               &kp LC(UP_ARROW)    &none                &none   &kp K_PLAY_PAUSE  &none         &none         &none         &none         &bootloader  &sys_reset
-            &bt BT_SEL 1  &none  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &none   &bt BT_SEL 4      &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-            &bt BT_SEL 2  &none  &none               &none               &none                &none   &none             &none         &none         &none         &none         &none
-                                                     &trans              &none                &trans  &trans            &none         &trans
+&bt BT_CLR  &bt BT_SEL 0  &none  &none  &Wrap_console_up    &none  &none   &none         &none         &none         &none         &none         &bootloader  &sys_reset
+            &bt BT_SEL 1  &none  &none  &Wrap_console_down  &none  &none   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+            &bt BT_SEL 2  &none  &none  &none               &none  &none   &none         &none         &none         &none         &none         &none
+                                        &trans              &none  &trans  &trans        &none         &trans
             >;
         };
 
