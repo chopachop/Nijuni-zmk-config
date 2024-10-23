@@ -43,21 +43,33 @@
         Wrap_console_log: Wrap_console_log {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp W>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp W>,
+                <&macro_release>;
+
             label = "WRAP_CONSOLE_LOG";
         };
 
         Wrap_console_down: Wrap_console_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp DOWN>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp DOWN>,
+                <&macro_release>;
+
             label = "WRAP_CONSOLE_DOWN";
         };
 
         Wrap_console_up: Wrap_console_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp UP>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT &kp W &kp UP>,
+                <&macro_release>;
+
             label = "WRAP_CONSOLE_UP";
         };
     };
